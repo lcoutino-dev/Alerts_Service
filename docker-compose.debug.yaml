@@ -1,0 +1,15 @@
+version: '3.6'
+
+services:
+  consumer_kycerrors:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: tail -F anything
+    container_name: development
+    volumes:
+      # for development share workspace to container
+      - ./:/src:Z
+      - /etc/localtime:/etc/localtime:ro
+    env_file:
+      - .env

@@ -1,0 +1,11 @@
+FROM golang:1.14-alpine
+
+RUN apk add --no-cache git
+
+WORKDIR /src 
+
+RUN go get github.com/sirupsen/logrus
+RUN go get github.com/streadway/amqp
+RUN go get github.com/badkaktus/gorocket
+
+COPY consumer.go /src

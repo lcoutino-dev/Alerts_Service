@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+  consumer_kycerrors:
+    build: .
+    restart: unless-stopped
+    container_name: development
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    env_file:
+      - .env
