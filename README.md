@@ -11,7 +11,7 @@ for normal use use docker-compose.yaml
 docker-compose up -d
 ```
 
-How to use this service in a bash script run in jobs
+How to use this service in a bash script and jobs
 ```bash
 #!/bin/bash
 podman run --rm -it --env-file alertas_servicios.env -v /etc/localtime:/etc/localtime:ro domain:version >> alertas_servicios.log && \
