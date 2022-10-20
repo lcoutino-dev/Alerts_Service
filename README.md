@@ -14,5 +14,5 @@ docker-compose up -d
 How to use this service in a bash script run in jobs
 ```bash
 #!/bin/bash
-podman run --rm -it --env-file alertas_servicios.env -v /etc/localtime:/etc/localtime:ro portus.credicapital.mx/produccion/alertas_servicios:3 >> alertas_servicios.log && \
+podman run --rm -it --env-file alertas_servicios.env -v /etc/localtime:/etc/localtime:ro domain:version >> alertas_servicios.log && \
 ```
