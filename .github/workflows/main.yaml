@@ -30,4 +30,3 @@ jobs:
           platforms: linux/amd64,linux/arm/v8
           tags: |
             ${{ secrets.CRED_USER_DOCKER }}/alertservice:latest
-            ${{ secrets.VCRED_USER_DOCKER }}/alertservice:${{ github.ref_name }}
